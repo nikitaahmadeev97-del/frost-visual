@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "package": "dev.frost.frostvisual.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "GameRendererMixin",
+    "InGameHudMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

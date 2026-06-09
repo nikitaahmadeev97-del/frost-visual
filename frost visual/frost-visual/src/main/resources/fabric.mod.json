@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "frostvisual",
+  "version": "1.0.0",
+  "name": "Frost Visual",
+  "description": "Frost Visual \u2014 beautiful client-side visuals for Minecraft 1.21.1",
+  "authors": [
+    "FrostDev"
+  ],
+  "license": "MIT",
+  "icon": "assets/frostvisual/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "dev.frost.frostvisual.FrostVisualMod"
+    ]
+  },
+  "mixins": [
+    "frostvisual.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.15.11",
+    "fabric-api": "*",
+    "minecraft": "~1.21.11"
+  }
+}
