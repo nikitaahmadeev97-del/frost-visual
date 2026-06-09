@@ -8,6 +8,19 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
+      - name: Download Official Fabric Template
+        run: |
+          git clone --depth=1 https://github.com/fabricmc/fabric-example-mod.git template
+          rm -rf template/.git
+          rm -rf template/src
+
+      - name: Merge Source Code
+        run: |
+          cp -r src template/
+          mv template/* . || true
+          mv template/.* . || true
+          rm -rf template
+
       - name: Set up JDK 21
         uses: actions/setup-java@v4
         with:
@@ -20,4 +33,4 @@ jobs:
           gradle-version: 8.7
 
       - name: Build Mod with Gradle
-        run: gradle build
+        run: chmod +x gradlew && ./gradlew build
